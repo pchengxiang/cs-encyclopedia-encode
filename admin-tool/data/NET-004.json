@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "WebSocket",
+    "en": "WebSocket"
+  },
+  "domain_category": {
+    "id": 3,
+    "name": "網路與通訊",
+    "description": "連結裝置、服務與資料的基礎"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "在瀏覽器與伺服器間提供全雙工、低延遲的持續連線。",
+  "purpose": "在用戶端與伺服器間維持雙向即時通訊。",
+  "paradigm": "事件驅動的全雙工協定",
+  "key_points": [
+    "持續連線",
+    "低延遲雙向傳輸"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "06",
+      "name": "協定通訊型",
+      "label": "protocol&communication",
+      "description": "以共同規則規範設備或系統之間的資訊交換與傳輸。"
+    },
+    "secondary": [
+      {
+        "id": "05",
+        "name": "系統接口型",
+        "label": "system&interface",
+        "description": "建立不同系統之間的識別、存取與功能介接。"
+      }
+    ]
+  },
+  "created_at": "2011-01-01",
+  "relations": [
+    {
+      "target_id": "NET-001",
+      "target_name": "HTTP",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "NET-005",
+      "target_name": "GraphQL",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "NET-004"
+}

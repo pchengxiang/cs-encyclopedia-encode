@@ -1,0 +1,48 @@
+{
+  "name": {
+    "zh": "CPython",
+    "en": "CPython"
+  },
+  "domain_category": {
+    "id": 1,
+    "name": "程式語言",
+    "description": "用來描述計算與建構軟體的語言"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "Python 最主要的參考實作，以 C 語言撰寫，並提供豐富的原生擴充能力。",
+  "purpose": "執行 Python 程式，並提供 Python 與作業系統之間的核心介面。",
+  "paradigm": "以物件導向為主，支援程序式與函數式",
+  "key_points": [
+    "以 C 語言實作",
+    "參考實作"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "08",
+      "name": "計算運行型",
+      "label": "computation&execution",
+      "description": "執行指令與運算程序，或提供程式運行環境。"
+    },
+    "secondary": [
+      {
+        "id": "04",
+        "name": "轉變資料型",
+        "label": "tech&info",
+        "description": "轉換、分析、生成、編碼或解讀資料與資訊。"
+      }
+    ]
+  },
+  "created_at": "1994-01-01",
+  "relations": [
+    {
+      "target_id": "LANG-001",
+      "target_name": "Python",
+      "relation_type": "implementation_of"
+    }
+  ],
+  "id": "LANG-002"
+}

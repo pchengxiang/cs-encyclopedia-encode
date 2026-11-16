@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "Redis",
+    "en": "Redis"
+  },
+  "domain_category": {
+    "id": 4,
+    "name": "資料庫",
+    "description": "組織、儲存與查詢資料的系統"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "以記憶體為主的資料結構儲存系統，常用作快取與訊息代理。",
+  "purpose": "以記憶體資料結構支援快取、佇列與快速讀寫。",
+  "paradigm": "鍵值與資料結構儲存",
+  "key_points": [
+    "常用於快取",
+    "支援多種資料結構"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "09",
+      "name": "資料儲存型",
+      "label": "data&storage",
+      "description": "保存、組織、索引、讀取及管理持久化資料。"
+    },
+    "secondary": [
+      {
+        "id": "10",
+        "name": "資源管理型",
+        "label": "resource&management",
+        "description": "分配、調度、限制與回收系統運行所需的計算資源。"
+      }
+    ]
+  },
+  "created_at": "2009-01-01",
+  "relations": [
+    {
+      "target_id": "DB-001",
+      "target_name": "PostgreSQL",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "DB-004",
+      "target_name": "Apache Kafka",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "DB-003"
+}

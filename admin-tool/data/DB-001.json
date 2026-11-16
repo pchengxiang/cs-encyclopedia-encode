@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "PostgreSQL",
+    "en": "PostgreSQL"
+  },
+  "domain_category": {
+    "id": 4,
+    "name": "資料庫",
+    "description": "組織、儲存與查詢資料的系統"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "功能完整的開源關聯式資料庫，支援複雜查詢與可擴充資料型別。",
+  "purpose": "可靠地儲存、查詢與管理結構化資料。",
+  "paradigm": "關聯式資料庫；物件關聯式擴充",
+  "key_points": [
+    "支援 SQL",
+    "交易與資料完整性"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "09",
+      "name": "資料儲存型",
+      "label": "data&storage",
+      "description": "保存、組織、索引、讀取及管理持久化資料。"
+    },
+    "secondary": [
+      {
+        "id": "04",
+        "name": "轉變資料型",
+        "label": "tech&info",
+        "description": "轉換、分析、生成、編碼或解讀資料與資訊。"
+      }
+    ]
+  },
+  "created_at": "1996-01-01",
+  "relations": [
+    {
+      "target_id": "DB-002",
+      "target_name": "SQLite",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "DB-003",
+      "target_name": "Redis",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "DB-001"
+}

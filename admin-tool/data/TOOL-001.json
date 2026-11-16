@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "Kubernetes",
+    "en": "Kubernetes"
+  },
+  "domain_category": {
+    "id": 7,
+    "name": "雲端與 DevOps",
+    "description": "建置、部署與營運現代服務"
+  },
+  "stage": "growing",
+  "development_stage": {
+    "value": "growing",
+    "label": "成長階段"
+  },
+  "description": "用於部署、擴展與管理容器化應用程式的開源平台。",
+  "purpose": "協調容器化應用的部署、擴展、服務探索與復原。",
+  "paradigm": "宣告式容器編排",
+  "key_points": [
+    "以期望狀態管理",
+    "支援叢集排程"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "16",
+      "name": "編排協調型",
+      "label": "orchestration&coordination",
+      "description": "組織及協調多個服務、程序或元件按流程共同運作。"
+    },
+    "secondary": [
+      {
+        "id": "10",
+        "name": "資源管理型",
+        "label": "resource&management",
+        "description": "分配、調度、限制與回收系統運行所需的計算資源。"
+      }
+    ]
+  },
+  "created_at": "2014-01-01",
+  "relations": [
+    {
+      "target_id": "OS-001",
+      "target_name": "Linux",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "TOOL-003",
+      "target_name": "Git",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "TOOL-001"
+}

@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "RAG 檢索增強生成",
+    "en": "RAG 檢索增強生成"
+  },
+  "domain_category": {
+    "id": 2,
+    "name": "人工智慧",
+    "description": "讓機器展現智慧行為的技術"
+  },
+  "stage": "growing",
+  "development_stage": {
+    "value": "growing",
+    "label": "成長階段"
+  },
+  "description": "結合資訊檢索與文字生成，讓模型回答時能參照外部知識來源。",
+  "purpose": "回答問題時先檢索外部資料，再將相關內容提供給生成模型。",
+  "paradigm": "檢索與生成的組合流程",
+  "key_points": [
+    "知識可外接更新",
+    "答案可附資料來源"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "04",
+      "name": "轉變資料型",
+      "label": "tech&info",
+      "description": "轉換、分析、生成、編碼或解讀資料與資訊。"
+    },
+    "secondary": [
+      {
+        "id": "05",
+        "name": "系統接口型",
+        "label": "system&interface",
+        "description": "建立不同系統之間的識別、存取與功能介接。"
+      }
+    ]
+  },
+  "created_at": "2020-01-01",
+  "relations": [
+    {
+      "target_id": "AI-001",
+      "target_name": "大型語言模型",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "AI-002",
+      "target_name": "Transformer",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "AI-003"
+}

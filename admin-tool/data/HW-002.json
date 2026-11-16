@@ -1,0 +1,48 @@
+{
+  "name": {
+    "zh": "ARM",
+    "en": "ARM"
+  },
+  "domain_category": {
+    "id": 8,
+    "name": "硬體與架構",
+    "description": "計算系統的底層硬體與設計"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "廣泛應用於行動裝置與伺服器的低功耗指令集架構。",
+  "purpose": "為處理器定義指令集，廣泛支援行動裝置與伺服器設計。",
+  "paradigm": "精簡指令集架構（ISA）",
+  "key_points": [
+    "重視能源效率",
+    "由多家廠商授權實作"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "08",
+      "name": "計算運行型",
+      "label": "computation&execution",
+      "description": "執行指令與運算程序，或提供程式運行環境。"
+    },
+    "secondary": [
+      {
+        "id": "10",
+        "name": "資源管理型",
+        "label": "resource&management",
+        "description": "分配、調度、限制與回收系統運行所需的計算資源。"
+      }
+    ]
+  },
+  "created_at": "1985-01-01",
+  "relations": [
+    {
+      "target_id": "HW-001",
+      "target_name": "RISC-V",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "HW-002"
+}

@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "Docker",
+    "en": "Docker"
+  },
+  "domain_category": {
+    "id": 7,
+    "name": "雲端與 DevOps",
+    "description": "建置、部署與營運現代服務"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "以容器封裝應用程式及其相依環境，讓開發與部署更加一致。",
+  "purpose": "封裝應用程式及其依賴，讓建置與執行環境保持一致。",
+  "paradigm": "容器化與映像分層",
+  "key_points": [
+    "共享主機核心",
+    "可攜式映像"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "14",
+      "name": "開發建構型",
+      "label": "development&building",
+      "description": "協助軟體開發、版本與依賴管理、編譯、打包及交付。"
+    },
+    "secondary": [
+      {
+        "id": "10",
+        "name": "資源管理型",
+        "label": "resource&management",
+        "description": "分配、調度、限制與回收系統運行所需的計算資源。"
+      }
+    ]
+  },
+  "created_at": "2013-01-01",
+  "relations": [
+    {
+      "target_id": "OS-001",
+      "target_name": "Linux",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "TOOL-001",
+      "target_name": "Kubernetes",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "TOOL-002"
+}

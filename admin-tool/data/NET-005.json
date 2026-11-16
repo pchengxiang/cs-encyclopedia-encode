@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "GraphQL",
+    "en": "GraphQL"
+  },
+  "domain_category": {
+    "id": 3,
+    "name": "網路與通訊",
+    "description": "連結裝置、服務與資料的基礎"
+  },
+  "stage": "growing",
+  "development_stage": {
+    "value": "growing",
+    "label": "成長階段"
+  },
+  "description": "讓用戶端能明確指定資料需求的 API 查詢語言與執行環境。",
+  "purpose": "讓用戶端精確描述 API 所需資料，減少多餘請求與欄位。",
+  "paradigm": "宣告式查詢語言與執行環境",
+  "key_points": [
+    "以 schema 定義型別",
+    "單一端點查詢"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "05",
+      "name": "系統接口型",
+      "label": "system&interface",
+      "description": "建立不同系統之間的識別、存取與功能介接。"
+    },
+    "secondary": [
+      {
+        "id": "04",
+        "name": "轉變資料型",
+        "label": "tech&info",
+        "description": "轉換、分析、生成、編碼或解讀資料與資訊。"
+      }
+    ]
+  },
+  "created_at": "2015-01-01",
+  "relations": [
+    {
+      "target_id": "NET-004",
+      "target_name": "WebSocket",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "NET-001",
+      "target_name": "HTTP",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "NET-005"
+}

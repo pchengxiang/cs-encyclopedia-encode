@@ -1,0 +1,48 @@
+{
+  "name": {
+    "zh": "Passkeys",
+    "en": "Passkeys"
+  },
+  "domain_category": {
+    "id": 6,
+    "name": "資安",
+    "description": "保護資訊、系統與數位基礎設施"
+  },
+  "stage": "growing",
+  "development_stage": {
+    "value": "growing",
+    "label": "成長階段"
+  },
+  "description": "使用公開金鑰密碼學取代傳統密碼的網路驗證方式。",
+  "purpose": "以裝置持有的金鑰登入網站，降低密碼外洩與釣魚風險。",
+  "paradigm": "公開金鑰密碼學驗證",
+  "key_points": [
+    "私鑰留在裝置",
+    "支援跨裝置同步或安全金鑰"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "07",
+      "name": "安全門鎖型",
+      "label": "security&access",
+      "description": "保護系統、資料與資源，並控制驗證、授權及存取權限。"
+    },
+    "secondary": [
+      {
+        "id": "05",
+        "name": "系統接口型",
+        "label": "system&interface",
+        "description": "建立不同系統之間的識別、存取與功能介接。"
+      }
+    ]
+  },
+  "created_at": "2022-01-01",
+  "relations": [
+    {
+      "target_id": "SEC-001",
+      "target_name": "零信任架構",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "SEC-002"
+}

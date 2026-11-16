@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "Linux",
+    "en": "Linux"
+  },
+  "domain_category": {
+    "id": 5,
+    "name": "作業系統",
+    "description": "管理硬體資源與程式執行環境"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "自由開源的類 Unix 作業系統核心，支撐伺服器、裝置與雲端基礎設施。",
+  "purpose": "管理處理器、記憶體、裝置與程式執行，提供系統核心能力。",
+  "paradigm": "單體核心；模組化設計",
+  "key_points": [
+    "開源核心",
+    "支援多種硬體平台"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "10",
+      "name": "資源管理型",
+      "label": "resource&management",
+      "description": "分配、調度、限制與回收系統運行所需的計算資源。"
+    },
+    "secondary": [
+      {
+        "id": "08",
+        "name": "計算運行型",
+        "label": "computation&execution",
+        "description": "執行指令與運算程序，或提供程式運行環境。"
+      }
+    ]
+  },
+  "created_at": "1991-01-01",
+  "relations": [
+    {
+      "target_id": "TOOL-001",
+      "target_name": "Kubernetes",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "TOOL-002",
+      "target_name": "Docker",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "OS-001"
+}

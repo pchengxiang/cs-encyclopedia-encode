@@ -1,0 +1,48 @@
+{
+  "name": {
+    "zh": "Apache Kafka",
+    "en": "Apache Kafka"
+  },
+  "domain_category": {
+    "id": 4,
+    "name": "資料庫",
+    "description": "組織、儲存與查詢資料的系統"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "分散式事件串流平台，用於高吞吐量的資料管道與即時處理。",
+  "purpose": "持久化並傳遞大量事件資料，支援串流處理與資料整合。",
+  "paradigm": "分散式事件串流平台",
+  "key_points": [
+    "主題分區",
+    "可重播事件"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "09",
+      "name": "資料儲存型",
+      "label": "data&storage",
+      "description": "保存、組織、索引、讀取及管理持久化資料。"
+    },
+    "secondary": [
+      {
+        "id": "06",
+        "name": "協定通訊型",
+        "label": "protocol&communication",
+        "description": "以共同規則規範設備或系統之間的資訊交換與傳輸。"
+      }
+    ]
+  },
+  "created_at": "2011-01-01",
+  "relations": [
+    {
+      "target_id": "DB-003",
+      "target_name": "Redis",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "DB-004"
+}

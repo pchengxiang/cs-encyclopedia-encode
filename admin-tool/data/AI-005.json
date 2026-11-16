@@ -1,0 +1,58 @@
+{
+  "name": {
+    "zh": "生成式 AI",
+    "en": "生成式 AI"
+  },
+  "domain_category": {
+    "id": 2,
+    "name": "人工智慧",
+    "description": "讓機器展現智慧行為的技術"
+  },
+  "stage": "growing",
+  "development_stage": {
+    "value": "growing",
+    "label": "成長階段"
+  },
+  "description": "能建立文字、圖像、音訊或程式碼等新內容的人工智慧方法。",
+  "purpose": "生成新的文字、圖像、音訊或其他內容。",
+  "paradigm": "生成式模型",
+  "key_points": [
+    "學習資料分布",
+    "可涵蓋多種輸出模態"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "04",
+      "name": "轉變資料型",
+      "label": "tech&info",
+      "description": "轉換、分析、生成、編碼或解讀資料與資訊。"
+    },
+    "secondary": [
+      {
+        "id": "08",
+        "name": "計算運行型",
+        "label": "computation&execution",
+        "description": "執行指令與運算程序，或提供程式運行環境。"
+      }
+    ]
+  },
+  "created_at": "2022-01-01",
+  "relations": [
+    {
+      "target_id": "AI-001",
+      "target_name": "大型語言模型",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "AI-002",
+      "target_name": "Transformer",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "AI-003",
+      "target_name": "RAG 檢索增強生成",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "AI-005"
+}

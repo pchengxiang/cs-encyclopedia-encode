@@ -1,0 +1,48 @@
+{
+  "name": {
+    "zh": "JavaScript",
+    "en": "JavaScript"
+  },
+  "domain_category": {
+    "id": 1,
+    "name": "程式語言",
+    "description": "用來描述計算與建構軟體的語言"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "網頁平台的核心程式語言，現已延伸至伺服器、桌面與行動應用程式。",
+  "purpose": "為網頁與各類執行環境提供互動與應用程式邏輯。",
+  "paradigm": "多典範：函數式、物件導向、事件驅動",
+  "key_points": [
+    "動態型別",
+    "事件迴圈"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "08",
+      "name": "計算運行型",
+      "label": "computation&execution",
+      "description": "執行指令與運算程序，或提供程式運行環境。"
+    },
+    "secondary": [
+      {
+        "id": "05",
+        "name": "系統接口型",
+        "label": "system&interface",
+        "description": "建立不同系統之間的識別、存取與功能介接。"
+      }
+    ]
+  },
+  "created_at": "1995-01-01",
+  "relations": [
+    {
+      "target_id": "LANG-003",
+      "target_name": "TypeScript",
+      "relation_type": "related_language"
+    }
+  ],
+  "id": "LANG-004"
+}

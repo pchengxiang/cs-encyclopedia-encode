@@ -1,0 +1,48 @@
+{
+  "name": {
+    "zh": "RISC-V",
+    "en": "RISC-V"
+  },
+  "domain_category": {
+    "id": 8,
+    "name": "硬體與架構",
+    "description": "計算系統的底層硬體與設計"
+  },
+  "stage": "growing",
+  "development_stage": {
+    "value": "growing",
+    "label": "成長階段"
+  },
+  "description": "開放標準指令集架構，允許任何人設計與實作處理器。",
+  "purpose": "提供開放且可擴充的處理器指令集，供不同實作者設計晶片。",
+  "paradigm": "精簡指令集架構（ISA）",
+  "key_points": [
+    "開放標準",
+    "模組化擴充"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "08",
+      "name": "計算運行型",
+      "label": "computation&execution",
+      "description": "執行指令與運算程序，或提供程式運行環境。"
+    },
+    "secondary": [
+      {
+        "id": "10",
+        "name": "資源管理型",
+        "label": "resource&management",
+        "description": "分配、調度、限制與回收系統運行所需的計算資源。"
+      }
+    ]
+  },
+  "created_at": "2010-01-01",
+  "relations": [
+    {
+      "target_id": "HW-002",
+      "target_name": "ARM",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "HW-001"
+}

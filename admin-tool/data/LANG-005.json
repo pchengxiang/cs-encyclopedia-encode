@@ -1,0 +1,48 @@
+{
+  "name": {
+    "zh": "Rust",
+    "en": "Rust"
+  },
+  "domain_category": {
+    "id": 1,
+    "name": "程式語言",
+    "description": "用來描述計算與建構軟體的語言"
+  },
+  "stage": "growing",
+  "development_stage": {
+    "value": "growing",
+    "label": "成長階段"
+  },
+  "description": "兼具記憶體安全與高效能的系統程式語言，不依賴垃圾回收器。",
+  "purpose": "建構效能敏感且重視記憶體安全的系統軟體。",
+  "paradigm": "多典範：函數式、程序式、特徵導向",
+  "key_points": [
+    "所有權與借用",
+    "無垃圾回收器"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "08",
+      "name": "計算運行型",
+      "label": "computation&execution",
+      "description": "執行指令與運算程序，或提供程式運行環境。"
+    },
+    "secondary": [
+      {
+        "id": "10",
+        "name": "資源管理型",
+        "label": "resource&management",
+        "description": "分配、調度、限制與回收系統運行所需的計算資源。"
+      }
+    ]
+  },
+  "created_at": "2010-01-01",
+  "relations": [
+    {
+      "target_id": "LANG-006",
+      "target_name": "C++",
+      "relation_type": "related_language"
+    }
+  ],
+  "id": "LANG-005"
+}

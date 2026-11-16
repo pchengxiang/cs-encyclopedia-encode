@@ -1,0 +1,58 @@
+{
+  "name": {
+    "zh": "Python",
+    "en": "Python"
+  },
+  "domain_category": {
+    "id": 1,
+    "name": "程式語言",
+    "description": "用來描述計算與建構軟體的語言"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "一種強調可讀性的高階通用程式語言，廣泛應用於自動化、資料科學與網頁開發。",
+  "purpose": "以清晰易讀的語法快速開發腳本、應用程式與資料工具。",
+  "paradigm": "多典範：物件導向、程序式、函數式",
+  "key_points": [
+    "動態型別",
+    "自動記憶體管理"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "08",
+      "name": "計算運行型",
+      "label": "computation&execution",
+      "description": "執行指令與運算程序，或提供程式運行環境。"
+    },
+    "secondary": [
+      {
+        "id": "04",
+        "name": "轉變資料型",
+        "label": "tech&info",
+        "description": "轉換、分析、生成、編碼或解讀資料與資訊。"
+      }
+    ]
+  },
+  "created_at": "1991-01-01",
+  "relations": [
+    {
+      "target_id": "LANG-002",
+      "target_name": "CPython",
+      "relation_type": "implementation"
+    },
+    {
+      "target_id": "LANG-003",
+      "target_name": "TypeScript",
+      "relation_type": "related_language"
+    },
+    {
+      "target_id": "LANG-005",
+      "target_name": "Rust",
+      "relation_type": "related_language"
+    }
+  ],
+  "id": "LANG-001"
+}

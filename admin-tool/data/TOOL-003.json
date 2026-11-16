@@ -1,0 +1,41 @@
+{
+  "name": {
+    "zh": "Git",
+    "en": "Git"
+  },
+  "domain_category": {
+    "id": 7,
+    "name": "雲端與 DevOps",
+    "description": "建置、部署與營運現代服務"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "分散式版本控制系統，協助開發團隊追蹤並協作管理程式碼。",
+  "purpose": "追蹤程式碼變更，支援分支、回溯與多人協作。",
+  "paradigm": "分散式版本控制",
+  "key_points": [
+    "本機完整歷史",
+    "提交形成有向無環圖"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "14",
+      "name": "開發建構型",
+      "label": "development&building",
+      "description": "協助軟體開發、版本與依賴管理、編譯、打包及交付。"
+    },
+    "secondary": []
+  },
+  "created_at": "2005-01-01",
+  "relations": [
+    {
+      "target_id": "TOOL-001",
+      "target_name": "Kubernetes",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "TOOL-003"
+}

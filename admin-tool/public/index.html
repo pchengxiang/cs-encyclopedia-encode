@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f7f3" />
+  <title>知序 · 科技項目管理</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><a class="brand" href="#"><span class="mark">知</span><span>知序<small>STANDALONE ADMIN</small></span></a><span class="local-tag"><i></i> LOCAL DATA TOOL</span></header>
+    <main>
+      <section class="intro"><div><span class="eyebrow">KNOWLEDGE BASE / MANAGEMENT</span><h1>科技項目管理</h1><p>整理百科資料，或使用 Gemini 產生可編輯的新項目草稿。</p></div><div class="total"><strong id="total">—</strong><span>個項目</span></div></section>
+      <section class="generator"><div class="spark">✳</div><div class="generator-copy"><strong>用 Gemini 建立新項目</strong><span>生成內容會先成為草稿，確認後才寫入資料檔。</span></div><form id="generate-form"><input id="topic" placeholder="輸入科技名稱或主題，例如：向量資料庫" maxlength="300" required /><button type="submit">✳　產生草稿</button></form></section>
+      <section class="workspace">
+        <aside class="library"><div class="library-head"><div><span class="eyebrow">LIBRARY</span><h2>所有項目</h2></div><button class="icon-button" id="reload" title="重新載入">↻</button></div><label class="search"><span>⌕</span><input id="search" placeholder="搜尋名稱或 ID" /></label><div id="items" class="items"></div></aside>
+        <article class="editor"><div class="editor-head"><div><span class="eyebrow" id="editor-kicker">EDITOR</span><h2 id="editor-title">選取一筆資料</h2></div><button id="delete" class="delete hidden">刪除項目</button></div><div id="summary" class="summary hidden"></div><div id="sources" class="sources hidden"></div><p id="hint" class="hint hidden">JSON 編輯器：修改完整項目內容，儲存前請檢查關聯 ID。</p><textarea id="json" class="json hidden" spellcheck="false" aria-label="科技項目 JSON"></textarea><div id="actions" class="actions hidden"><span id="editor-message">新增草稿的 ID 會由系統自動指派。</span><button id="save">儲存變更</button></div><div id="placeholder" class="placeholder"><div>⌘</div><strong>選取項目開始編輯</strong><span>或使用上方 Gemini 表單新增科技項目。</span></div></article>
+      </section>
+    </main>
+    <footer class="footer"><span>STANDALONE TOOL · DATA DIRECTORY CONFIGURABLE</span><label>ADMIN TOKEN<input id="token" type="password" autocomplete="current-password" placeholder="輸入 .env.local 設定的 token" /></label></footer>
+  </div>
+  <div id="busy" class="busy hidden"><span class="spinner"></span><span id="busy-text">處理中</span></div>
+  <div id="toast" class="toast hidden"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

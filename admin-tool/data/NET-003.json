@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "TCP/IP",
+    "en": "TCP/IP"
+  },
+  "domain_category": {
+    "id": 3,
+    "name": "網路與通訊",
+    "description": "連結裝置、服務與資料的基礎"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "網際網路通訊協定套組，規範資料在不同網路間傳輸的方式。",
+  "purpose": "讓不同網路上的裝置能互相定址、傳輸與路由資料。",
+  "paradigm": "分層式協定套組",
+  "key_points": [
+    "IP 負責網路層傳送",
+    "TCP 提供可靠傳輸"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "06",
+      "name": "協定通訊型",
+      "label": "protocol&communication",
+      "description": "以共同規則規範設備或系統之間的資訊交換與傳輸。"
+    },
+    "secondary": [
+      {
+        "id": "08",
+        "name": "計算運行型",
+        "label": "computation&execution",
+        "description": "執行指令與運算程序，或提供程式運行環境。"
+      }
+    ]
+  },
+  "created_at": "1974-01-01",
+  "relations": [
+    {
+      "target_id": "NET-001",
+      "target_name": "HTTP",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "NET-002",
+      "target_name": "HTTP/3",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "NET-003"
+}

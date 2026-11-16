@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "HTTP",
+    "en": "HTTP"
+  },
+  "domain_category": {
+    "id": 3,
+    "name": "網路與通訊",
+    "description": "連結裝置、服務與資料的基礎"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "網頁瀏覽器與伺服器交換資源時使用的應用層協定。",
+  "purpose": "規範瀏覽器與伺服器如何請求及傳回網頁資源。",
+  "paradigm": "無狀態的請求／回應協定",
+  "key_points": [
+    "應用層協定",
+    "可搭配不同傳輸層"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "06",
+      "name": "協定通訊型",
+      "label": "protocol&communication",
+      "description": "以共同規則規範設備或系統之間的資訊交換與傳輸。"
+    },
+    "secondary": [
+      {
+        "id": "05",
+        "name": "系統接口型",
+        "label": "system&interface",
+        "description": "建立不同系統之間的識別、存取與功能介接。"
+      }
+    ]
+  },
+  "created_at": "1989-01-01",
+  "relations": [
+    {
+      "target_id": "NET-002",
+      "target_name": "HTTP/3",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "NET-003",
+      "target_name": "TCP/IP",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "NET-001"
+}

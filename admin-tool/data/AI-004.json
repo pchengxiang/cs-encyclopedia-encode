@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "機器學習",
+    "en": "機器學習"
+  },
+  "domain_category": {
+    "id": 2,
+    "name": "人工智慧",
+    "description": "讓機器展現智慧行為的技術"
+  },
+  "stage": "mature",
+  "development_stage": {
+    "value": "mature",
+    "label": "成熟階段"
+  },
+  "description": "透過資料訓練模型，使系統能辨識模式並改善預測結果。",
+  "purpose": "從資料找出模式，支援分類、預測與決策。",
+  "paradigm": "統計學習",
+  "key_points": [
+    "依資料訓練模型",
+    "涵蓋監督式與非監督式方法"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "04",
+      "name": "轉變資料型",
+      "label": "tech&info",
+      "description": "轉換、分析、生成、編碼或解讀資料與資訊。"
+    },
+    "secondary": [
+      {
+        "id": "08",
+        "name": "計算運行型",
+        "label": "computation&execution",
+        "description": "執行指令與運算程序，或提供程式運行環境。"
+      }
+    ]
+  },
+  "created_at": "1959-01-01",
+  "relations": [
+    {
+      "target_id": "AI-001",
+      "target_name": "大型語言模型",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "AI-002",
+      "target_name": "Transformer",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "AI-004"
+}

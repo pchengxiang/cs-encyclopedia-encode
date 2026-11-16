@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "TypeScript",
+    "en": "TypeScript"
+  },
+  "domain_category": {
+    "id": 1,
+    "name": "程式語言",
+    "description": "用來描述計算與建構軟體的語言"
+  },
+  "stage": "growing",
+  "development_stage": {
+    "value": "growing",
+    "label": "成長階段"
+  },
+  "description": "為 JavaScript 加上靜態型別的程式語言，協助團隊在開發階段提早發現錯誤。",
+  "purpose": "在 JavaScript 專案中加入靜態型別檢查，讓大型程式碼更易維護。",
+  "paradigm": "多典範：物件導向、函數式、程序式",
+  "key_points": [
+    "編譯為 JavaScript",
+    "漸進式採用型別"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "14",
+      "name": "開發建構型",
+      "label": "development&building",
+      "description": "協助軟體開發、版本與依賴管理、編譯、打包及交付。"
+    },
+    "secondary": [
+      {
+        "id": "08",
+        "name": "計算運行型",
+        "label": "computation&execution",
+        "description": "執行指令與運算程序，或提供程式運行環境。"
+      }
+    ]
+  },
+  "created_at": "2012-01-01",
+  "relations": [
+    {
+      "target_id": "LANG-004",
+      "target_name": "JavaScript",
+      "relation_type": "related_language"
+    },
+    {
+      "target_id": "LANG-005",
+      "target_name": "Rust",
+      "relation_type": "related_language"
+    }
+  ],
+  "id": "LANG-003"
+}

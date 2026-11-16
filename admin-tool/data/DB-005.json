@@ -1,0 +1,186 @@
+{
+  "name": {
+    "zh": "向量資料庫",
+    "en": "Vector Database"
+  },
+  "domain_category": {
+    "id": 4,
+    "name": "資料庫",
+    "description": "組織、儲存與查詢資料的系統"
+  },
+  "stage": "emerging",
+  "development_stage": {
+    "value": "emerging",
+    "label": "新興階段"
+  },
+  "description": "向量資料庫是一種專門用於儲存、管理和索引高維度向量資料的資料庫系統。它將文字、圖像、音訊或其他非結構化資料轉換為數值表示形式，稱為「向量嵌入」。這些向量捕捉了資料的語義和特徵，使系統能夠根據相似性而非精確匹配來檢索資訊。與傳統資料庫處理結構化資料不同，向量資料庫擅長處理非結構化和多維資料，並透過近似最近鄰 (ANN) 演算法和各種索引技術實現高效的相似性搜尋。在 AI Agent 領域，「harness」通常指管控 AI Agent 全生命週期的工程體系，包含工具管理、上下文與記憶管理等，而非向量資料庫的標準化技術或單一產品。向量資料庫在其中作為長期記憶層的儲存介質，其用法尚未標準化為單一整合產品。",
+  "purpose": "向量資料庫主要用於支援需要語義理解和相似性匹配的 AI 應用，例如語義搜尋、檢索增強生成 (RAG)、推薦系統、對話式 AI、異常偵測以及多模態搜尋。",
+  "paradigm": "向量資料庫的核心設計方式是將資料轉換為高維度向量嵌入，並利用距離度量（如餘弦相似度、歐幾里得距離、點積）來量化向量之間的相似性。為實現快速檢索，它採用近似最近鄰 (ANN) 演算法，並結合 HNSW、LSH、IVF 等向量索引技術來優化搜尋效率。",
+  "key_points": [
+    "儲存和索引高維度向量嵌入，以捕捉資料的語義和特徵。",
+    "支援基於相似性而非精確關鍵字匹配的資料檢索，適用於非結構化資料。",
+    "利用近似最近鄰 (ANN) 演算法和專用索引技術，實現大規模資料集中的高效相似性搜尋。",
+    "是大型語言模型 (LLM)、檢索增強生成 (RAG) 和其他 AI 應用程式的關鍵基礎設施。"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "09",
+      "name": "資料儲存型",
+      "label": "data&storage",
+      "description": "保存、組織、索引、讀取及管理持久化資料。"
+    },
+    "secondary": [
+      {
+        "id": "04",
+        "name": "轉變資料型",
+        "label": "tech&info",
+        "description": "轉換、分析、生成、編碼或解讀資料與資訊。"
+      }
+    ]
+  },
+  "created_at": "2019-01-01",
+  "relations": [],
+  "sources": [
+    {
+      "title": "ibm.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUes-otuVy5URv6fWQ7Fi6viIucSJJL1983CU3cVXse7kZvx2C0vynMGChwYMeEFlRavyemJ2fouWZydfzfOV3mKt15KV9WxvUhgd3gZQwjE0-cnZ44F6dmReD00OhpnAvdl07SPsuEH0lnQ=="
+    },
+    {
+      "title": "sap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEp2eCtVQt7pfFybgBdlLf0P541j7BEMGmeuWkJzmeMJFm1f6kCoVqqGIL3NCkRD7eIJBNKTFdQ7ov0vnXqH3l-UMd_psGf3Xlv1eYuGRYedgUKX3Fo_ZglKa7x0yKRFYVceP730ePj3goacosko1skEdTiMFxPeINg"
+    },
+    {
+      "title": "wikipedia.org",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN7LM-MahwvG5SDmZqM_9JrYc9_XrOEr8ks4lqf6N_fv2jDVkX6sm47KJsdshFqXQF9S7KUmXXYDQEm9DGcyO7z_FMTLIhShsOSUskU4gssm2vc5o1gVX4S9rNlIJdmfDmSx7FlzYDJFaidnw2ftmJlLLNmh5-CnSfwsgstdNPsP6CHKRorAg="
+    },
+    {
+      "title": "seoseo.com.tw",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdoQDi4j0oboqaDYlVCb3-XubQsKGL0XIAGt7g8i7mNIBm4TivedbTi3Z6Z13yFV4ZevKbitXRMQY9I5kBhH0BuDxGe4G74v05bsUWaOLx2W2CVrKfDZb22G9qPpRg1w_jX-q0u0KIPs_qEJN8V6VOAA=="
+    },
+    {
+      "title": "microsoft.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJglzj9repz8NxUJCAa6K_IdYcN6UZ_LxbAAdZRprBlh20l1A6cEpSiLYOSX-fSw3FrS0kDXPUkKpwfAOV3zPGkVTNe_yvRH5ohRLPkToodyaIRX97KhFTTHo0RjyZ_gvI93fBDmEtjRYxZ_VT-q9NyTXSRgM454ess0BT9uKEtimFUpy4PkQY77YZhSNsiRpDFIkj8U80Bvg="
+    },
+    {
+      "title": "sap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgijfBxu0G5daqlzTB3b4tzVrmwd5KFN3XDiFZbAuM3ztyJu1Se55O-rFmAbUFRsspPQRBaxTAEOebsNbxT7RQquJsdQVdjLJ6__efwAJ8qvUFRUg48myRl2I9SyCGTJQrUHvdyTGLdY79jQhC0E3icHY="
+    },
+    {
+      "title": "google.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEv2MpMhZjtoYvIZofCVfXKAhId1NVKsljWb5Qr3lSUq49bDtQs-faKWjiJ1ifH3alCM2T9JNlT_WGTTOPHLIbDZ-7xCrfQ3WBXmg6tlu7z5QlyXvBVNpVNCRe0b0TZAFVE1fM5ruuCoXsujzYOfJ2WRh-2Yj0teOwZQvNxs4Wb"
+    },
+    {
+      "title": "omniwaresoft.com.tw",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4-rrYL06lT1JZ4oYAeCn_R1SDJyZ9SyrtfThZzigIJuTNxdk0o-kjMmqGJj6wlEz9iltSrYitJfA2jDPiQwji6Wk_3jC7QKEpkzYGndGwMjJVjXpWxW2PNfTuKZqRDS3VIUkzjzj9GIqLk3pCKx1CqJD2G5RxlVBJ9t1M9yz2FtU0J3vjhDoJKsaTOW2U3A6RRgEqfELtsA=="
+    },
+    {
+      "title": "xomnia.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEh27dJaDetLXnR10XvfQPiqGkbAR0bjwbEx0uJY6GOEWi_Ga3nH0grQ76Y36kcCVD5_FmY2o6erhjP_Umq0YDMoV3T_Gmc1VYUK-b7DPYIa5jN9cL453XQ8JZngzr-_uVIBP38DqawKuwrlWWa_mnmCjlzItxxiwa94ULdX5p0MuXyAA5R"
+    },
+    {
+      "title": "cloudflare.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkjhAn3FiL-3udbTnjF9ILP707O3Iz08fdx2x_QyePYU7zCT4MZ6Th1FzTGhHI3gI7DnO1PqNxYSwV9_bZ5aSMDmEaZCELlgYH1aEP2eSIKuCwx1e0RRL_1TuWxOIs2wpZzhcUCMApivM1Lvn6SBDvxsdN8GlIhEYrnOTPnx2Ksw=="
+    },
+    {
+      "title": "couchbase.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKa-PsGmiueBXtoVV2jj3Y9NFQU3p2sUKF8VfRbgujlcaHzFmgPfp5hRJ47794OYSoAr0fnMm8YfDTykxIJ9lvQRXgOyasmz6OwhfWW6E8HMdUZgUMadQqmbF5-Qing3PSJmRcNterzGQTcLxgvc3D1cnDP6UT"
+    },
+    {
+      "title": "cloudian.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBOLBsu98gdQMswgZk9F8lHp_V0pZEE2AsyS89zOy1Zl3xNUVG5hxtaVP2vBvKUCH-Cg3gXTytK7QM9hPA8AIJtzIChK7mGuDtIKfndLOaptSS0ZQJkfbYKu783Iha-zPdBQ7A436xI_-YyALEbjaTnQMF9N1j7PKDCGw-5FHsaEqc9xf9Ci7iJADN8gxidKyfXAMong_7AfOkrXs4JA=="
+    },
+    {
+      "title": "elastic.co",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtUcA0J_AM9XFcOyYFa_2uUE6l3pkiO-tV2bvEuN2nHQ-b6Xi5Fa29_cujsVh_uyZl0i3jCWMkn5Ek5ifWx7EUcPV2w2gC3xLnsF7ke9Jh1Xm0L4oLctze96WwUid7fZaCsHuRY1uAihUZ4vo="
+    },
+    {
+      "title": "databricks.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8Kpmpo35W848b2VG35x6WWG2PM79OoB-IriAdf6ZdktruG-AMeDGOszMuXDjLWiTqH9Sa5gv-B1MSqnceYx3goVkUWOPpaaWSLgpZOuXJDymrBzDgD8BlWwIyu8SsiQ2iPD-ekr9L4mCKtMKwKxvmPC8="
+    },
+    {
+      "title": "ntu.edu.tw",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoIrAq6NgbpjMqKrSb0_YXcV4P4t5NiqU3IGZVcL5mVU_87LVQ62lzopHcpfGbOuIsKoEQocwOpMFWMqCMiAnL4Urnaklz4G--xboq3EBPsrDRtTrt19tboiPO_xO-vJwDXiN-bEB6RXJ2znugu40xUr2KU8_SwFNRfCovE1KvhHckZhGVUA_zzpdaqg=="
+    },
+    {
+      "title": "csdn.net",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUhgDAZwvPakuRC6uPCUGDg5KVpgigu_dIzV6epMEeBHNGbqGUdo6yWEPu18uh9Kl8czp6vZB1dj_7pBA0aai382Jk7RGj2pxQTbfkXR8JM_NxMJb5f9Is1iFCxr11HsHu3VIKJOeqSUKHIfyzI4d5L2LIyQ4XFvc="
+    },
+    {
+      "title": "github.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgc5ZDaeKM0anP-2shm6iEBHFsB-cBR9mF5OTZoIKjjOcyCSERw84mI7ckHO9KUbBU8oY_ZAIjlq3TF8NRjaA6ryAX_nQ3LFcHB4MCCVoQkcioO9iZrB8lCtIOJgWztNdd-md4-8E9z76TzdPh8bAvOGuvyQldrKjueVtbLNmQlLo3mj3WSegfq9urdbHXc4g1eMDaR3rqXP9QbC8QvkjyfMoJA2AFyTU="
+    },
+    {
+      "title": "aiworks.tw",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSdHiG2dEkDCaaltOLwDneWp1LVT-TLKEvbaw91HBEED7AJ4iFgFlM8C3RT2guT6Djfgzr9ktHw4fNvH2PQL6Aa3eIWWGOIMdm-_9BOy8gA-G_Wy2J9Xu31AnPdUIHgVhTKGk_"
+    },
+    {
+      "title": "abmedia.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHq7Cm4TnETBPhydjviiSAPo5B-e4c1qCovfDYVWcXEjXKBedmwVnnVAiDNTDMILDOZ1ICnItHyallMGNBuJmHO9gD2CWjhYFTZwZ9zUOyDAsy_g21zOmIzT01ftmeATd-72m-AWeT6LsfkF0jLKhj9O89TZsJgLs4qyb__0jE="
+    },
+    {
+      "title": "bnext.com.tw",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbwcx3R3weOcsq46Vz8lghCTtcrR1Mn1cD6zWNHWCByvtZeukpkLdCPIeJXPLAvFOCSnQsWacb5lpWeMKF00raxuQMgP2sMkMivm7pOkxkAzEaBUu4fzNJiV1gzGzpvHLNaAbHZ0Ald-wuC3GqBu3Zb9MMLaQDicKuqLDOdpWaTFc4dRsbY7KZR2d8DemY58dX1g=="
+    },
+    {
+      "title": "mindstudio.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFumJvmWPheVzIxQNDZqBktK3lB6N2yU-oYJ-LmAZa3oGl81JxP53bwueZI_RErOW7vwzPtFAqPMXnrj_exmJlyec_u_zOmJMbuRrc-dMNV3iTPb8rUgBg1xu8BYPyNiQB2IUPt_pnGucY8WpsrQBVzaAsm7xEQrxovzz4zajPxxh4e7EzSFVECbA=="
+    },
+    {
+      "title": "entrans.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFB6yVJ_arXbub-JJcHeMnhLfa7-fgMyyUtkk7tYu_cwqscMUwr46HxqrQy01FN-fDZSDKGrg-fX6yvmmoFBHJjJS-4IAjmfUf8PXXkByF6IHf959C3ALtEF8178hK-QlZa-8VNrmV4bOrFwKKwwZ0J"
+    },
+    {
+      "title": "google.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8OWl635PPsFj1YR0ZnkutSIj35szJfcb57562g0bElfeeWSO_2ddBBfxzsTReOgbYs0xA1Tyo5ubaym5J3cWXM827KW4Dnn4BUmo1me9MsPTr_OhMpAb8tCCa1YBDdJ_kbrkbAEYjcYITlrrTcjt7DOBQnciV"
+    },
+    {
+      "title": "amazon.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfrbAJ92hOHnSqxZ6mm53bJLj-VInX9m8JJ9sVKlVEBfBWyLYb9VQ00WiWUk3fPRoN8FGyRPCEaw3kUghOTFohlHty2ZHbFVQBH__5r-0wWeYTcuRfmuxAC8bBzAFPuMczMGgFs6HwPn6D0bOemg=="
+    },
+    {
+      "title": "endava.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG73QOgxBp3obB1UFvtwkmVmCcIS1DztwgmsC7I4wioFDa5NDBFLt-kQ1ZTSp4lh93r53bqf-Zrwgoif9ge95f53yI9lvVovP-YX1CCGveEiKU9RSOaBcrV5T3ZjHnuemowh6uNgRZ-KXfGSf137UTlnMwiSm_qkuPSH7Xdw5_6vA=="
+    },
+    {
+      "title": "67ailab.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfks5BslBVHIgIQDWOnl0VAMs8GeT1PDDq3Gojqcr3_CCLS4P6w96ki7DmC2UPC5c59gDk_fyWnEnxkqhVW8MVKbfGnBQ1BiYJy3I02VNfVQSKxH5aMaA6G51DKqSV5cMZGu6z-1oniufl2i1ozY051sSu2ycNaIj1hH1gYbfHhVnT7FPgkKqT5sS5WBk4FMltQw=="
+    },
+    {
+      "title": "amazonaws.cn",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZhhfXh97l5ZNF-nsgXtV9pFVk9v6efCsybbl-RbbLd1GRKRbhXvrtMZHb-i_-Q94sGyZ7N8LVkQBKv-sjjiJ8QW4iCgzFCzDKfn2_OlctncILJJfX1M6hy75T8KUJxNDDa_sNWmmH9IWFZSVyLA=="
+    },
+    {
+      "title": "towardsai.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGl05wgbsEh59ZPLEN1hp42-Y_fnVKYL6e6ft1pAQ8I7kh3YUYDZexY2Zl-uHoNcydqovncRtryn6Pp3HA3lZt6Wh5meOMOpVxkAN_dFJecXqczrRZ68NHcxf5wPVin4eaohbMsElT-fZ2o7a0a2XXjkTaVCxJoCJzKqYNN47LhfnTFMcr3oRSIPKc-ddhUG_Iunlg1SOpP_PGmSpeuUA=="
+    },
+    {
+      "title": "amazon.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9lrVYnkFYrS0BnxGdhzajvsIJnu21KMmwRkieByr8TNzhZOUq9Oby09JxQf0g2XkXJ7z5spPLGqWrIbZxWaNnmjYmSe0MQZStnT1X475Qr2i4h9-7FfRLF1NIZFb90r7DC1Z6RffMiedeDQ=="
+    },
+    {
+      "title": "pinecone.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTUHITtIGD-sD1rr6nbHHEgHseTtG-faL7G9-6JGqexYkKskfRRwOs5NvBCxNhonOqrr4P6se5y_sIXpg7KAVt69HG5Wq0_mfOhoSEbYO-Ugpjamedo4bSB4MJsufQQkyNvcJI2TeWvWM="
+    },
+    {
+      "title": "simplebackups.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoBUim0P13kJFzAyEVnKUzcxXUF6rRTyCgNorswlASJJ_-1AK-fcDPkt_LkyKrXMHHgfsmtYex-QrlPDttLb2baDa6qnCSjBjpDEFs1hRRUsZ7gJ0hUKZQfGkE1398qgsxfCuT3LvQIJiWlxazA6F7v1gKB_DtH0cTHQ=="
+    },
+    {
+      "title": "gate.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9jEMb3X6U3FOc7ndK-GnfrpB8KYxIoLkIbJOgiZ_MQEAgAH1iTuLtAuKs7Rbluwf6R-fHp10wElERiqCZ0DrS1xHOGLpjXeLuVExIUgp6rTjO40-2zCfmzROGTuIrIlhUgEzyI5rUOHBQuyyQ_IJ3xpNwVnNNM2iN73F2GW_1ZpmeIlAkFvvC7OlMtSjRm404RfL7dFjJ"
+    },
+    {
+      "title": "intersystems.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOyE5Geg_MmzHc9Ma0qEaaG9W8p-_adhyjpKAB8v3GoCp2DboV8kVnSe5Ue-qoCnStOokPP-aNBPIqRtOQjgb6fkQ39-jIsyuZcBTj4ZdohUDNmkC4K9dG2odMPrcak_tXzDOCIEJY1fFGbin2JxbJ2aBFPNVkOUNksl7pT361efTYPWAislAn6RxIVcCleCedHmr4"
+    },
+    {
+      "title": "google.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsw3ZbRp4jldLD6RLxVGZhph54Wb2I-3SlawiO-_UDwZRguHHYotVkeptB5O-sUZGlT6MmUEiVZbOn4Y94YdgyG3yVhmKprli7lTNFynLhIZmwtlEMOX8dFap9IFVezwdwxMIICmHQA1cVA5W-K5PqtGPR9MKLCzQvywDIVv7p"
+    },
+    {
+      "title": "myapollo.com.tw",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFS2ESacrDRvDAWN3uYAH-KnBU1EXgY8q2wmrYl_NfQXzKQFgqDVkR4kCPLipI4Y8OmN3xTMx7pnRaBsNkGEqBg8NJBGqf0Vph5gwkmHMtlxzrBsz8edyNN0V1BG7tz9PYH6uyKAUcVj_l_rX058EqpvqRlDoaMDduGHA=="
+    }
+  ],
+  "id": "DB-005"
+}

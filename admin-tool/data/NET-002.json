@@ -1,0 +1,53 @@
+{
+  "name": {
+    "zh": "HTTP/3",
+    "en": "HTTP/3"
+  },
+  "domain_category": {
+    "id": 3,
+    "name": "網路與通訊",
+    "description": "連結裝置、服務與資料的基礎"
+  },
+  "stage": "growing",
+  "development_stage": {
+    "value": "growing",
+    "label": "成長階段"
+  },
+  "description": "基於 QUIC 的 HTTP 版本，改善連線建立速度與網路切換韌性。",
+  "purpose": "以 QUIC 傳輸 HTTP 資料，改善連線建立與網路切換體驗。",
+  "paradigm": "應用層協定",
+  "key_points": [
+    "以 UDP 為基礎",
+    "支援多工串流"
+  ],
+  "function_categories": {
+    "primary": {
+      "id": "06",
+      "name": "協定通訊型",
+      "label": "protocol&communication",
+      "description": "以共同規則規範設備或系統之間的資訊交換與傳輸。"
+    },
+    "secondary": [
+      {
+        "id": "08",
+        "name": "計算運行型",
+        "label": "computation&execution",
+        "description": "執行指令與運算程序，或提供程式運行環境。"
+      }
+    ]
+  },
+  "created_at": "2022-01-01",
+  "relations": [
+    {
+      "target_id": "NET-001",
+      "target_name": "HTTP",
+      "relation_type": "related_technology"
+    },
+    {
+      "target_id": "NET-003",
+      "target_name": "TCP/IP",
+      "relation_type": "related_technology"
+    }
+  ],
+  "id": "NET-002"
+}
