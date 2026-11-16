@@ -44,19 +44,107 @@ async function generate(topic) {
   const items = await loadItems()
   const categories = [...new Map(items.map(item => item.domain_category ?? item.category).filter(Boolean).map(item => [String(item.id), item])).values()]
   const functions = [...new Map(items.flatMap(item => [item.function_categories?.primary, ...(item.function_categories?.secondary ?? [])]).filter(Boolean).map(item => [item.id, item])).values()]
-  const prompt = `你是電腦科學百科的審慎編輯。請先用 Google Search 查證主題，再依查到的證據建立一筆繁體中文 JSON 草稿。主題：${topic}
+  const technologyIndex = items.map(item => ({
+    id: item.id,
+    name_zh: item.name?.zh ?? item.name,
+    name_en: item.name?.en ?? item.name?.zh ?? item.name,
+    category: (item.domain_category ?? item.category)?.name ?? '',
+    description: item.description ?? '',
+    purpose: item.purpose ?? '',
+    paradigm: item.paradigm ?? '',
+  }))
+  const prompt = `你是電腦科學百科的審慎編輯。請先使用 Google Search 查證主題，再建立一筆繁體中文 JSON 草稿。
 
-編輯規則：
-- 「harness」在 AI agent 領域可能是泛稱或工程慣例，不一定是標準化技術或單一產品。先辨明實際用法；若沒有一致定義，要在 description 明確寫出「用法尚未標準化」，不要把它包裝成已定義的整合產品。
-- 只寫搜尋結果能支持的事實。不要臆造起源、年份、功能、產品、標準或業界共識；缺少證據時以空字串或空陣列表示。
-- created_at 只在來源能確認技術起源年份時填 YYYY-01-01，否則填空字串。不要用模型猜年份。
-- 只可使用下列既有領域分類與作用分類，欄位值必須完整照抄：
+主題：${topic}
+
+## 查證原則
+
+- 先確認主題在可信來源中的實際用法，再撰寫條目。優先採用官方文件、標準文件、原始研究或技術維護者的說明；必要時以其他可靠來源交叉核對。
+- 搜尋結果必須直接支持你寫入的事實。不要只根據搜尋摘要推斷細節；若無法確認，使用空字串或空陣列。
+- 不得臆造起源、年份、功能、產品、標準、分類共識或技術關係。
+- 若不同來源對主題的定義或用法不一致，請在 description 簡要指出差異或範圍，不要將其中一種用法寫成唯一共識。
+- 「harness」在 AI agent 領域可能是泛稱或工程慣例，不一定是標準化技術或單一產品。若查證後沒有一致定義，description 必須明確包含「用法尚未標準化」，並說明本條目整理的是概念或工程實踐，不得包裝成已定義的整合產品。
+- created_at 僅在來源明確確認技術起源年份時填入 YYYY-01-01；否則填空字串。不要以首次提及、發布日期或模型推測代替起源年份。
+- 若來源不足以支持建立條目，仍回傳指定 JSON 結構，將無法確認的欄位留空，並在 description 說明證據限制。
+
+## 分類規則
+
+只可使用下列既有領域分類與作用分類。選用時，欄位值必須完整照抄，不得自行改名、翻譯或新增分類：
+
 領域分類：${JSON.stringify(categories)}
 作用分類：${JSON.stringify(functions)}
-- 關聯項目只能使用下列既有項目的 ID 和名稱；沒有直接關係就回傳空陣列：${JSON.stringify(items.map(item => ({ id: item.id, name: item.name?.zh ?? item.name?.en ?? item.name })))}
-- 概念型條目不要假稱為特定軟體框架。description 說明核心意義及邊界；purpose 說明用途；paradigm 只填來源支持的設計方式，否則留空。key_points 填 2 至 4 點，避免重複或宣傳式語句。
-- stage 只可為 research、emerging、growing、mature、maintenance、declining。若主題是泛稱概念，選 emerging 並在 description 說明這是編輯分類，不代表正式標準。
-- 回覆只能是 JSON 物件，不要 Markdown 或前言。結構：{"name":{"zh":"","en":""},"domain_category":{"id":1,"name":"","description":""},"stage":"emerging","development_stage":{"value":"emerging","label":"新興階段"},"description":"","purpose":"","paradigm":"","key_points":[],"function_categories":{"primary":{"id":"","name":"","label":"","description":""},"secondary":[]},"created_at":"","relations":[]}`
+
+- 選擇最能描述主題核心用途的領域分類與一個主要作用分類。
+- 只有在來源支持且確實有不同功能時，才加入次要作用分類；不要為了填滿欄位而增加分類。
+- 若提供的分類都不適用，使用清單中最接近的分類，不得建立新分類。
+- 概念型條目的 stage 使用 emerging，並在 description 說明這是百科的編輯分類，不代表正式標準或業界共識。
+- stage 只可為 research、emerging、growing、mature、maintenance、declining。若不是泛稱概念，依來源支持的證據選擇；無法判斷時選 emerging，並避免暗示這是客觀或正式認定。
+- development_stage.value 必須與 stage 相同；label 必須使用對應中文：research「研究階段」、emerging「新興階段」、growing「成長階段」、mature「成熟階段」、maintenance「維護階段」、declining「衰退階段」。
+
+## 條目撰寫規則
+
+- name.zh 使用清楚、自然的繁體中文名稱；若沒有穩定中文譯名，可保留常用英文名稱。name.en 填入來源使用的英文名稱；來源未提供時留空。
+- description 說明核心意義與適用邊界。避免宣傳語、絕對化承諾，以及將可能性描述成保證。
+- purpose 說明此技術或概念解決什麼問題、用於什麼目的；來源不足時留空。
+- paradigm 只填來源明確支持的設計方式或技術典範；沒有直接證據時留空。不要把常見實作範例寫成所有實作都遵循的規則。
+- key_points 填 2 至 4 個簡短、彼此不重複且有來源支持的重點。若可確認的重點不足 2 個，依證據填寫，不要補湊。
+- 不要把概念、工程模式或泛稱誤寫成特定軟體框架、產品或標準。
+- relations 僅列百科目錄中與主題有直接技術關係的項目。同屬一個大分類、常一起出現或僅有一般性關聯，都不足以建立關係。
+- 請逐項比較目錄內項目的 ID、名稱、分類、摘要、用途和典範，再判斷關聯；不可只依搜尋結果決定百科內部關聯。
+- 最多列出 5 個關聯項目。若目錄中存在明確的直接關係，至少列出最強的一項；若無直接關係，回傳空陣列，不要勉強建立關聯。
+- 每個 target_id 必須逐字取自目錄；target_name 必須使用該筆目錄項目的繁體中文名稱。
+- relation_type 只可使用 related_technology、implementation、implementation_of、related_language。只有來源或條目內容能支持實作關係時，才使用 implementation 或 implementation_of；否則使用 related_technology。related_language 僅用於直接的程式語言關係。
+- 每一筆關聯不得重複 target_id。
+
+既有項目目錄：${JSON.stringify(technologyIndex)}
+
+## 輸出要求
+
+- 只回傳一個可直接解析的 JSON 物件，不要 Markdown、程式碼區塊、前言、註解或 JSON 外的文字。
+- 使用標準 JSON：字串以雙引號包住，不得使用尾逗號、undefined、NaN 或註解。
+- 所有文字內容使用繁體中文；技術名稱、專有名詞與必要的英文術語可保留英文。
+- 欄位必須完整符合下列結構與順序；無法確認的字串填空字串，無項目填空陣列：
+
+{
+  "name": {
+    "zh": "",
+    "en": ""
+  },
+  "domain_category": {
+    "id": 1,
+    "name": "",
+    "description": ""
+  },
+  "stage": "emerging",
+  "development_stage": {
+    "value": "emerging",
+    "label": "新興階段"
+  },
+  "description": "",
+  "purpose": "",
+  "paradigm": "",
+  "key_points": [],
+  "function_categories": {
+    "primary": {
+      "id": "",
+      "name": "",
+      "label": "",
+      "description": ""
+    },
+    "secondary": []
+  },
+  "created_at": "",
+  "relations": [],
+  "sources": []
+}
+
+## 來源欄位
+
+- sources 是來源陣列。每筆來源使用 {"title":"","url":""}。
+- 僅列出實際開啟並用於撰寫內容的來源；URL 必須是來源頁面網址，不得填搜尋結果頁。
+- 優先列 2 至 5 個最相關來源；若只找到一個可靠來源，列一個；若沒有可用來源，回傳空陣列。
+- 不要在來源欄位以外加入無法由 JSON 結構表示的引用格式。
+- 輸出前自我檢查 JSON 語法、欄位完整性、分類值、階段對應、關聯 ID 與來源網址。`
   const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(process.env.GEMINI_MODEL || 'gemini-2.5-flash')}:generateContent`, {
     method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
     body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], tools: [{ google_search: {} }], generationConfig: { temperature: 0.2 } }),
@@ -81,10 +169,14 @@ async function generate(topic) {
   if (!stages.includes(draft.stage)) throw new Error('Gemini 回傳了無效的發展階段，請再產生一次。')
   if (!Array.isArray(draft.key_points) || !Array.isArray(draft.relations)) throw new Error('Gemini 草稿欄位不完整，請再產生一次。')
   const byId = new Map(items.map(item => [String(item.id), item]))
-  draft.relations = (draft.relations ?? []).flatMap(relation => {
+  const relationTypes = new Set(['related_technology', 'implementation', 'implementation_of', 'related_language'])
+  const checkedRelations = (draft.relations ?? []).flatMap(relation => {
     const target = byId.get(String(relation.target_id))
-    return target ? [{ ...relation, target_id: target.id, target_name: target.name?.zh ?? target.name?.en ?? String(target.name) }] : []
+    return target && relationTypes.has(relation.relation_type)
+      ? [{ ...relation, target_id: target.id, target_name: target.name?.zh ?? target.name?.en ?? String(target.name) }]
+      : []
   })
+  draft.relations = [...new Map(checkedRelations.map(relation => [`${relation.target_id}:${relation.relation_type}`, relation])).values()].slice(0, 5)
   draft.development_stage = { value: draft.stage, label: stageLabels[draft.stage] }
   return draft
 }
